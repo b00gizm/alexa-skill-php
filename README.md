@@ -1,5 +1,7 @@
 # alexa-skill-php
 
+[![Build Status](https://travis-ci.org/b00giZm/alexa-skill-php.svg?branch=master)](https://travis-ci.org/b00giZm/alexa-skill-php)
+
 OOP wrappers for the Amazon [Alexa Skill JSON interface](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference).
 
 ## Install via Composer
