@@ -7,7 +7,7 @@ OOP wrappers for the Amazon [Alexa Skill JSON interface](https://developer.amazo
 ## Install via Composer
 
 ```bash
-composer require b00gizm/alexa-skill-php
+composer require b00gizm/alexa-skill
 ```
 
 ## Example
