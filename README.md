@@ -1,6 +1,6 @@
 # alexa-skill-php
 
-[![Build Status](https://travis-ci.org/b00giZm/alexa-skill-php.svg?branch=master)](https://travis-ci.org/b00giZm/alexa-skill-php)
+[![Build Status](https://travis-ci.org/b00giZm/alexa-skill-php.svg?branch=master)](https://travis-ci.org/b00giZm/alexa-skill-php) [![Latest Stable Version](https://poser.pugx.org/b00gizm/alexa-skill/v/stable)](https://packagist.org/packages/b00gizm/alexa-skill)
 
 OOP wrappers for the Amazon [Alexa Skill JSON interface](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference).
 
