@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source ./ck/.run-opt.sh
+
+set -e
+
+./ck/run $options php vendor/bin/phpunit ${@}

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+pushd "$(dirname $0)" > /dev/null
+
+if [[ $1 == '--self-update' ]]; then
+	curl 'https://raw.githubusercontent.com/chefkoch-dev/docker-run/master/run' -o run
+	exit
+fi
+
+options=''
+[[ -n ${SSH_AUTH_SOCK} ]] && options+=" -v ${SSH_AUTH_SOCK}:/run/ssh.sock -e SSH_AUTH_SOCK=/run/ssh.sock"
+
+CACHE_CONTAINER=cache-container-$(pwd | (shasum || sha1sum) | awk '{print $1}')
+
+docker run --rm \
+    -v $(pwd)/../:/app \
+    -w /app \
+    --volumes-from=${CACHE_CONTAINER} \
+    -v /etc/passwd:/etc/passwd:ro \
+    -v /etc/group:/etc/group:ro \
+    -v /run/docker.sock:/run/docker.sock \
+    -u $(id -u) \
+    ${options} \
+    "$@"
